@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+  }
+  h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+  h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #303030;
+    font-weight: 400;
+    margin-bottom: 30px;
+  }
+  .jumbotron {
+    background-color: purple;
+    color: #fff;
+    padding: 100px 25px;
+    font-family: Montserrat, sans-serif;
+  }
+  .container-fluid {
+    padding: 60px 50px;
+  }
+  .bg-grey {
+    background-color: #f6f6f6;
+  }
+  .logo-small {
+    color: #f4511e;
+    font-size: 50px;
+  }
+  .logo {
+    color: #f4511e;
+    font-size: 200px;
+  }
+  .thumbnail {
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+  }
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #f4511e;
+  }
+  .carousel-indicators li {
+    border-color: #f4511e;
+  }
+  .carousel-indicators li.active {
+    background-color: #f4511e;
+  }
+  .item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+  }
+  .item span {
+    font-style: normal;
+  }
+  .panel {
+    border: 1px solid #f4511e;
+    border-radius:0 !important;
+    transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+    border: 1px solid #f4511e;
+    background-color: #fff !important;
+    color: #f4511e;
+  }
+  .panel-heading {
+    color: #fff !important;
+    background-color: #f4511e !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+    background-color: white !important;
+  }
+  .panel-footer h3 {
+    font-size: 32px;
+  }
+  .panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+  }
+  .panel-footer .btn {
+    margin: 15px 0;
+    background-color: #f4511e;
+    color: #fff;
+  }
+  .navbar {
+    margin-bottom: 0;
+    background-color: purple;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+  }
+  .navbar-brand{
+    background-image: url("../assets/images/logo.png");
+    background-size: 32px;
+    background-repeat: no-repeat;
+  }
+  .navbar li a, .navbar  {
+    color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+    color: #f4511e !important;
+    background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+    border-color: transparent;
+    color: #fff !important;
+  }
+  footer .glyphicon {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #f4511e;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+      width: 100%;
+      margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+      font-size: 150px;
+    }
+  }
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+   <a class="navbar-brand" href="#myPage"></a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">FEATURES</a></li>
+        <li><a href="#services">SERVICES</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="jumbotron text-center">
+  <h1>Limited liability Partnership</h1>
+  <p>Features | Registration | Documents required | Requirement | Advantages</p>
+
+</div>
+
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2> Features of Limited Liability Partnership</h2><br>
+      <p>
+An LLP is a form of organization which is having combined features of a partnership as well as companies and it is registered under Limited Liability Partnership Act 2008 under MCA.
+LLP has perpetual succession which means leaving of partner from the firm will not affect the LLP firm. The firm will remain carry on it’s business.
+LLP is a body corporate and it has separate legal entity from its partners and have assets and liabilities that are separate from that of the partners Thus, an LLP is capable, in its own name, of acquiring, owning, holding, disposing of property, whether movable, immovable, tangible or intangible.
+Name of LLP can be changed .
+In an LLP there is no maximum limit on number of partners but LLP must have at least two individuals as Designated Partners. At least one of the Designated Partners must be resident in India (stays in India for at least 182 days during the preceding financial year) irrespective of their citizenship.
+In case number of Partners reduces below 2, the sole Partner will have the right to search a new Partner to fill the position without dissolution of the LLP.
+LLP have an easy and quick closure as compared to Company.
+In LLP there can be adding of partner or removal of partner..</p>
+      <br>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Registration Procedure of Limited Liability Partnership</h2><br>
+      <h4><strong>These are the few steps that one should follow during registration Procedure of Limited Liability Partnership.</strong></h4><br>
+      <p><b>Step I Basic check before Incorporation</b> <ul> • Identify designated partners </ul> <ul>• Acquire Digital Signature (class 2) of the proposed designated partner (Atleast 1 DSC is required for Signing the Application)
+</ul><ul>• Designated partner if does not hold DIN then will be allotted through Filing form only and no separate application is required.</ul>
+<b>Step II Approval of Name </b><ul>• Check availability of name and get approval in RUN Form for LLP.</ul>
+<b>Step III Filing of Incorporation documents </b><ul>• Apply for incorporation of LLP in Filling form "Form for Incorporation of Limited Liability Partnership"</ul>
+<ul>• Detailed description of all the partners and designated partner and subscriber sheet and attachment as required described below in detail.</ul>
+<ul>• Once the Form Filing is completed in all respect ,then it is to be digitally signed by designated partner and also to be certified by Advocate/CA/CS/Cost Accountants in practice.</ul>
+<ul>• The form after this need to be uploaded on MCA portal with the prescribed fees.</ul>
+<b>Step IV Certification of Registration</b> <ul>• Registrar after satisfying himself about completeness in documents and various compliances, issue certificate of incorporation.</ul>
+<ul>• In case of any discrepancies found in the form, then it comes in resubmission and need to be uploaded again with satisfying the remarks by MCA.</ul>
+<b>Step V Post incorporation compliance</b><ul>• within 30 days of the incorporation, need to file Form 3 — LLP Agreement with the signed and stamped, notarized LLP Agreement.</ul></strong> .</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Services Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2> Documents Required for Limited Liability Partnership</h2><br>
+      <p>
+      <ul>• PAN Card and Adhar card (Mandatorily Required) of the Partners/Designated Partner </ul>
+        <ul>• Address Proof of the Partners/ Designated Partners (Voter id/ Driving License/ passport-anyone)</ul>
+        <ul>• Electricity Bill of the proposed Registered Office of the LLP (In case of owned)</ul>
+        <ul>• No-Objection Certificate from the Landlord, electricity bill and Rental Agreement Copy between the LLP and the Landlord (In case of Rented Office)</ul>
+        <ul>• Subscriber Sheet</ul>
+        <ul>• Consent of designated partner</ul>
+        <ul>• DSC of designated partner</ul>
+        <ul>• Documents Required</ul>
+          <ul>• Forms to be Filed</ul>
+        <ul>• E-Forms for Limited Liability Partnership</ul>
+        <ul>• LLP-RUN Form</ul>
+          <ul>• Fillip Form</ul>
+        <ul>• Form-3</ul>
+.</p>
+      <br>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<div class="container-fluid bg-grey">
+  <div class="row">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-globe logo slideanim"></span>
+    </div>
+    <div class="col-sm-8">
+      <h2>Requirements for Limited Liability Partnership</h2><br>
+      <p><ul>• Minimum 2 Partners.</ul>
+<ul>• Minimum 2 Designated Partners.</ul>
+<ul>• At least 1 of the designated partners shall be an Indian Resident.</ul>
+<ul>• If a body corporate is a partner, it has to nominate a natural person as its nominee</ul>
+<ul>• No Minimum Capital Requirement.</ul>
+<ul>• DPIN (Designated Partner Identification Number) for all the Partners.</ul>
+<ul>• DSC (Digital Signature Certificate) for one of the Designated Partner.</ul>
+
+</p>
+    </div>
+  </div>
+</div>
+<!----content---->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>
+Advantages of Limited Liability Partnership</h2><br>
+      <p>
+        • <b>Minimum capital requirements in LLP:</b><ul> LLP can be registered with any amount of capital that is mutually decided by partners in their LLP agreement so there is no limitation by the act. </ul>
+        • <b>Less Registration Cost :</b><ul> The cost of registering LLP is low as compared to cost of incorporating a private limited or a One person company or public limited company.</ul>
+        • <b>No compulsory Audit :</b> <ul>There is no compulsory audit for LLP as compared to all limited companies. This is a important benefit of LLP. A Limited Liability Partnership is required to get the audited only when it crosses the following threshold limits:</ul>
+        <ul>• No-Objection Certificate from the Landlord, electricity bill and Rental Agreement Copy between the LLP and the Landlord (In case of Rented Office)</ul>
+        <ul>   1. The contributions of the LLP exceeds Rs. 25 Lakhs, or </ul>
+              <ul> 2. The annual turnover of the LLP exceeds Rs. 40 Lakhs</ul>
+
+      •<b>Limited Liability protection:</b><ul> Under LLP, one partner is not responsible or liable for another partner's misconduct or negligence. In case of any adverse situation in LLP, only investment to start a business is lost, personal assets of the Partners are safe.</ul>
+
+.</p>
+      <br>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-signal logo"></span>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>Made By Phoenix <a href="https://puneethkshetty.netlify.app" title="Visit w3schools"></a></p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+})
+</script>
+
+</body>
+</html>
